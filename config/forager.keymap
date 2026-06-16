@@ -86,7 +86,7 @@
             &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp Y           &kp O           &kp U           &kp COMMA
             &lhm LALT N     &lhm LGUI R     &lhm LSHFT T    &lhm LCTRL S    &kp G                                           &kp P           &rhm LCTRL H    &rhm LSHFT A    &rhm LGUI E     &rhm LALT I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp F           &kp SQT         &kp SEMI        &kp DOT
-                                                                            &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
+                                                                            &mo SYM         &smart_shift    &smart_shift    &mo NAV
             >;
         };
 
