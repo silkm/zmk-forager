@@ -83,9 +83,9 @@
 
         base {
             bindings = <
-            &kp A           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           AS(SEMI)
-            &kp A           &lhm LCTRL R    &lhm LALT S     &lhm LGUI T     &kp G                                           &kp M           &rhm LGUI N     &rhm LALT E     &rhm LCTRL I    &kp O
-            &kp Z           &kp X           &kp C           &kp D           &kp V                                           &kp K           &kp H           AS(COMMA)       AS(DOT)         AS(FSLH)
+            &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp Y           &kp O           &kp U           &kp COMMA
+            &lhm LALT N     &lhm LGUI R     &lhm LSHFT T    &lhm LCTRL S    &lhm MEH G                                      &rhm MEH P      &rhm LCTRL H    &rhm RSHFT A    &rhm LGUI E     &rhm LALT I
+            &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp F           &kp SQT         &kp SEMI        &kp DOT
                                                                             &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
             >;
         };
