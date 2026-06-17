@@ -40,6 +40,18 @@
             bindings = <&sk LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        comma_morph: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;   // shift -> ?
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dot_morph: dot_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp FSLH>;      // shift -> / (shift stripped)
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         sym_bspc: left_thumb_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
