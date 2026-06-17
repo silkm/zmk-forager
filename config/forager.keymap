@@ -129,7 +129,7 @@
             &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp Y           &kp O           &kp U           &comma_morph
             &lhm LALT N     &lhm LGUI R     &lhm LSHFT T    &lhm LCTRL S    &lhm MEH G                                      &rhm MEH P      &rhm LCTRL H    &rhm RSHFT A    &rhm LGUI E     &rhm LALT I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp F           &kp SQT         &kp SEMI        &dot_morph
-                                                                            &sym_bspc 2 0   &smart_shift    &smart_shift    &lt NAV SPACE
+                                                                            &lt NAV SPACE   &kp TAB         &kp ENTER       &sym_bspc 2 0
             >;
         };
 
@@ -138,7 +138,7 @@
             &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &none           &none           &kp UP          &none           &kp COMMA
             &ht LALT N6     &ht LGUI N7     &ht LSHFT N8    &ht LCTRL N9    &kp N0                                          &kp LG(GRAVE)   &ht LCTRL LEFT  &ht LSHFT DOWN  &ht LGUI RIGHT  &kp LALT
             &kp AT          &none           &none           &kp SPACE       &none                                           &none           &kp LC(LS(TAB)) &kp LC(TAB)     &kp SEMI        &kp DOT
-                                                                            &mo SYM         &kp LSHFT       &trans          &trans
+                                                                            &trans          &trans          &trans          &trans
             >;
         };
 
@@ -147,7 +147,7 @@
             &kp PIPE        &kp LPAR        &kp RPAR        &kp LBKT        &kp RBKT                                        &kp AMPS        &kp EXCL        &kp AT          &kp QMARK       &kp COMMA
             &ht LALT LESS_THAN  &ht LGUI EQUAL  &ht LSHFT MINUS  &ht LCTRL GREATER_THAN  &kp PRCNT                          &kp HASH        &ht LCTRL FSLH  &ht LSHFT CARET &ht LGUI DLLR   &ht LALT BSLH
             &kp TILDE       &kp PLUS        &kp UNDER       &kp LBRC        &kp RBRC                                        &kp ASTRK       &kp GRAVE       &kp SQT         &kp SEMI        &kp DOT
-                                                                            &trans          &trans          &kp LSHFT       &mo NAV
+                                                                            &trans          &trans          &trans          &trans
             >;
         };
 
