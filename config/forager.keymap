@@ -82,6 +82,24 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            hold-trigger-on-release;
+        };
+        shft: shifted_tap {                        // Shift+<key> then release Shift atomically
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LSHFT>;
+        };
+        shm: shifted_homerow_mod {                 // homerow mod whose tap is a clean shifted key
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&shft>;
         };
     };
 
@@ -142,7 +160,7 @@
             &kp B           &kp L           &kp D           &kp C           &kp V                                           &kp J           &kp Y           &kp O           &kp U           &comma_morph
             &lhm LALT N     &lhm LGUI R     &lhm LSHFT T    &lhm LCTRL S    &lhm MEH G                                      &rhm MEH P      &rhm LCTRL H    &rhm RSHFT A    &rhm LGUI E     &rhm LALT I
             &kp X           &kp Q           &kp M           &kp W           &kp Z                                           &kp K           &kp F           &kp SQT         &kp SEMI        &dot_morph
-                                                                            &lt NAV SPACE   &kp TAB         &kp ENTER       &sym_bspc 2 0
+                                                                            &lt NAV SPACE   &mt LSHFT TAB   &kp ENTER       &sym_bspc 2 0
             >;
         };
 
@@ -158,7 +176,7 @@
         sym {
             bindings = <
             &kp PIPE        &kp LPAR        &kp RPAR        &kp LBKT        &kp RBKT                                        &kp AMPS        &kp EXCL        &kp AT          &kp QMARK       &kp COMMA
-            &ht LALT LESS_THAN  &ht LGUI EQUAL  &ht LSHFT MINUS  &ht LCTRL GREATER_THAN  &kp PRCNT                          &kp HASH        &ht LCTRL FSLH  &ht LSHFT CARET &ht LGUI DLLR   &ht LALT BSLH
+            &shm LALT COMMA     &ht LGUI EQUAL  &ht LSHFT MINUS  &shm LCTRL DOT          &kp PRCNT                          &kp HASH        &ht LCTRL FSLH  &ht LSHFT CARET &ht LGUI DLLR   &ht LALT BSLH
             &kp TILDE       &kp PLUS        &kp UNDER       &kp LBRC        &kp RBRC                                        &kp ASTRK       &kp GRAVE       &kp SQT         &kp SEMI        &kp DOT
                                                                             &trans          &trans          &trans          &trans
             >;
