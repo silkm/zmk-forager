@@ -103,14 +103,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -148,6 +140,18 @@
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&sk LSHFT>;
+            layers = <BASE>;
+        };
+        combo_adj {                  // inner thumbs
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mo ADJ>;
+            layers = <BASE>;
+        };
+        combo_caps_word {            // W + F
+            timeout-ms = <50>;
+            key-positions = <23 26>;
+            bindings = <&caps_word>;
             layers = <BASE>;
         };
     };
