@@ -172,7 +172,7 @@
             bindings = <
             &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &none           &none           &kp UP          &none           &kp COMMA
             &ht LALT N6     &ht LGUI N7     &ht LSHFT N8    &ht LCTRL N9    &kp N0                                          &kp LG(GRAVE)   &ht LCTRL LEFT  &ht LSHFT DOWN  &ht LGUI RIGHT  &kp LALT
-            &kp AT          &none           &none           &kp SPACE       &none                                           &none           &kp LC(LS(TAB)) &kp LC(TAB)     &kp SEMI        &kp DOT
+            &kp AT          &none           &none           &kp SPACE       &none                                           &none           &none           &kp DQT         &kp SEMI        &kp DOT
                                                                             &trans          &trans          &trans          &trans
             >;
         };
