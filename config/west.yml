@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: v0.3
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -14,9 +14,10 @@ manifest:
       import: app/west.yml
     - name: forager-zmk-module
       remote: carrefinho
-      revision: main
+      # zephyr-4-1-update branch head; switch to main once it's merged upstream
+      revision: 6c5e0ce69a9c8ce2d9f68b4b609ae99a1b468749
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3
+      revision: main
   self:
     path: config
