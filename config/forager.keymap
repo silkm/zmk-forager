@@ -6,7 +6,8 @@
 #define BASE 0
 #define NAV  1
 #define SYM  2
-#define ADJ  3
+#define GAME 3
+#define ADJ  4
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define MEH LS(LC(LALT))
@@ -130,6 +131,12 @@
             bindings = <&kp ESC>;
             layers = <BASE>;
         };
+        combo_escape_ld {            // L + D
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
+            layers = <BASE>;
+        };
         combo_caps_l {               // M + W
             timeout-ms = <50>;
             key-positions = <22 23>;
@@ -142,17 +149,23 @@
             bindings = <&sk LSHFT>;
             layers = <BASE>;
         };
-        combo_adj {                  // inner thumbs
+        combo_adj {                  // inner thumbs (also available from the game layer so you can exit it)
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&mo ADJ>;
-            layers = <BASE>;
+            layers = <BASE GAME>;
         };
         combo_caps_word {            // W + F
             timeout-ms = <50>;
             key-positions = <23 26>;
             bindings = <&caps_word>;
             layers = <BASE>;
+        };
+        combo_game_toggle {          // on ADJ: the two index-finger keys, middle row (hold inner thumbs first)
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&tog GAME>;
+            layers = <ADJ>;
         };
     };
 
@@ -183,6 +196,15 @@
             &shm LALT COMMA     &ht LGUI EQUAL  &ht LSHFT MINUS  &shm LCTRL DOT          &kp PRCNT                          &kp HASH        &ht LCTRL FSLH  &ht LSHFT CARET &ht LGUI DLLR   &ht LALT BSLH
             &kp TILDE       &kp PLUS        &kp UNDER       &kp LBRC        &kp RBRC                                        &kp ASTRK       &kp GRAVE       &kp SQT         &kp SEMI        &kp DOT
                                                                             &trans          &trans          &trans          &trans
+            >;
+        };
+
+        game {
+            bindings = <
+            &kp TAB         &kp Q           &kp W           &kp E           &kp R                                           &kp T           &kp Y           &kp U           &kp I           &kp O
+            &kp LCTRL       &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L
+            &kp LSHFT       &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT
+                                                                            &kp SPACE       &kp LALT        &kp ENTER       &kp BSPC
             >;
         };
 
