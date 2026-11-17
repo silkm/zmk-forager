@@ -156,9 +156,17 @@
             bindings = <&mo ADJ>;
             layers = <BASE GAME>;
         };
-        combo_caps_word {            // W + F
-            timeout-ms = <50>;
-            key-positions = <23 26>;
+        combo_caps_word_l {          // D + C
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            key-positions = <2 3>;
+            bindings = <&caps_word>;
+            layers = <BASE>;
+        };
+        combo_caps_word_r {          // Y + O
+            timeout-ms = <35>;
+            require-prior-idle-ms = <150>;
+            key-positions = <6 7>;
             bindings = <&caps_word>;
             layers = <BASE>;
         };
